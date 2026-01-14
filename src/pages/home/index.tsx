@@ -1,8 +1,8 @@
-import { Button, Divider, Dropdown, Flex, Space, Typography } from "antd";
+import { Button, Divider, Dropdown, Flex, Space, Typography, Collapse, Row, Col, Card, Statistic } from "antd";
 import style from "./index.module.scss";
 import { observer } from "mobx-react-lite";
 import { Logo } from "@/components/Logo";
-import { MenuOutlined } from "@ant-design/icons";
+import { MenuOutlined, ThunderboltOutlined, CheckCircleOutlined, SafetyCertificateOutlined, CloudDownloadOutlined } from "@ant-design/icons";
 import { gstate } from "@/global";
 import { changeLang, langList } from "@/locale";
 import { homeState } from "@/states/home";
@@ -39,17 +39,12 @@ const Header = observer(() => {
           }}
         >
           <Flex className={style.locale} align="center">
-            {/* <svg viewBox="0 0 24 24" style={{ color: "currentcolor" }}>
-              <path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" />
-            </svg> */}
-
             <svg viewBox="0 0 1024 1024" style={{ color: "currentcolor" }}>
               <path d="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z" />
             </svg>
             <Typography.Text>{getCurentLangStr()}</Typography.Text>
           </Flex>
         </Dropdown>
-
 
         {/* If non-PC is determined, the menu button will be displayed */}
         {!isPC && homeState.list.size > 0 && (
@@ -68,10 +63,163 @@ const Header = observer(() => {
   );
 });
 
+const FeaturesSection = () => {
+  const features = [
+    {
+      icon: <ThunderboltOutlined style={{ fontSize: '32px', color: '#722ED1' }} />,
+      title: 'Lightning Fast Compression',
+      description: 'Compress images in seconds with our advanced algorithms that maintain quality while reducing file size.'
+    },
+    {
+      icon: <SafetyCertificateOutlined style={{ fontSize: '32px', color: '#722ED1' }} />,
+      title: 'Privacy First',
+      description: 'All image processing happens locally in your browser. No uploads to external servers - your images stay private.'
+    },
+    {
+      icon: <CloudDownloadOutlined style={{ fontSize: '32px', color: '#722ED1' }} />,
+      title: 'Multiple Format Support',
+      description: 'Supports JPG, PNG, WEBP, AVIF, SVG, GIF and more. Convert between formats as needed.'
+    },
+    {
+      icon: <CheckCircleOutlined style={{ fontSize: '32px', color: '#722ED1' }} />,
+      title: 'Quality Control',
+      description: 'Fine-tune compression settings to achieve the perfect balance between file size and image quality.'
+    }
+  ];
+
+  return (
+    <section style={{ padding: '60px 20px', backgroundColor: '#fff' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', marginBottom: '50px' }}>
+        <Typography.Title level={2}>Powerful Image Compression Made Simple</Typography.Title>
+        <Typography.Paragraph style={{ fontSize: '18px', color: '#666' }}>
+          Reduce image file sizes without sacrificing quality. Perfect for websites, social media, and storage.
+        </Typography.Paragraph>
+      </div>
+      
+      <Row gutter={[24, 24]} justify="center">
+        {features.map((feature, index) => (
+          <Col xs={24} sm={12} md={6} key={index}>
+            <Card 
+              hoverable 
+              style={{ textAlign: 'center', borderRadius: 0, border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}
+            >
+              <div style={{ marginBottom: '16px' }}>{feature.icon}</div>
+              <Typography.Title level={4}>{feature.title}</Typography.Title>
+              <Typography.Paragraph type="secondary">{feature.description}</Typography.Paragraph>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </section>
+  );
+};
+
+const StatsSection = () => {
+  return (
+    <section style={{ padding: '40px 20px', backgroundColor: '#f9f0ff', textAlign: 'center' }}>
+      <Row gutter={[24, 24]} justify="center">
+        <Col xs={12} sm={6}>
+          <Statistic 
+            title="Average Size Reduction" 
+            value="60-80%" 
+            prefix={<span style={{ color: '#722ED1', fontSize: '24px' }}>↓</span>} 
+          />
+        </Col>
+        <Col xs={12} sm={6}>
+          <Statistic 
+            title="Supported Formats" 
+            value="6+" 
+            prefix={<span style={{ color: '#722ED1', fontSize: '24px' }}>🖼️</span>} 
+          />
+        </Col>
+        <Col xs={12} sm={6}>
+          <Statistic 
+            title="Privacy Guaranteed" 
+            value="100%" 
+            prefix={<span style={{ color: '#722ED1', fontSize: '24px' }}>🔒</span>} 
+          />
+        </Col>
+        <Col xs={12} sm={6}>
+          <Statistic 
+            title="No Registration" 
+            value="✓" 
+            prefix={<span style={{ color: '#722ED1', fontSize: '24px' }}>🚀</span>} 
+          />
+        </Col>
+      </Row>
+    </section>
+  );
+};
+
+const FAQSection = () => {
+  const faqs = [
+    {
+      key: '1',
+      label: 'How does Image Zip work?',
+      children: 'Image Zip processes your images directly in your browser using advanced compression algorithms. No images are uploaded to any server, ensuring your privacy and security. The compression reduces file sizes while maintaining visual quality.'
+    },
+    {
+      key: '2',
+      label: 'Is my privacy protected?',
+      children: 'Yes, absolutely. All image processing happens locally in your browser. We never upload your images to any server, and no data is collected or stored. Your images remain completely private and secure.'
+    },
+    {
+      key: '3',
+      label: 'What formats are supported?',
+      children: 'We support JPG, PNG, WEBP, AVIF, SVG, and GIF formats. You can compress images in any of these formats and even convert between formats while compressing.'
+    },
+    {
+      key: '4',
+      label: 'Will image quality be affected?',
+      children: 'Our compression algorithms are designed to maintain visual quality while significantly reducing file sizes. You can adjust compression settings to find the perfect balance between file size and quality for your needs.'
+    },
+    {
+      key: '5',
+      label: 'Is there a file size limit?',
+      children: 'There are no strict limits - you can compress images of any size. However, processing very large images may take more time. The compression happens locally in your browser, so performance depends on your device capabilities.'
+    }
+  ];
+
+  return (
+    <section style={{ padding: '60px 20px', backgroundColor: '#fff' }}>
+      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <Typography.Title level={2} style={{ textAlign: 'center', marginBottom: '40px' }}>Frequently Asked Questions</Typography.Title>
+        <Collapse accordion items={faqs} />
+      </div>
+    </section>
+  );
+};
+
+const MainContent = observer(() => {
+  // Show introduction when no images are uploaded
+  if (homeState.list.size === 0) {
+    return (
+      <div>
+        <div style={{ padding: '40px 20px', textAlign: 'center', backgroundColor: '#fafafa' }}>
+          <Typography.Title level={1}>Compress Images Instantly</Typography.Title>
+          <Typography.Paragraph style={{ fontSize: '18px', marginTop: '20px' }}>
+            Reduce image file sizes by up to 80% without losing quality. All processing happens in your browser - your images stay private.
+          </Typography.Paragraph>
+          <div style={{ marginTop: '40px' }}>
+            <UploadCard />
+          </div>
+        </div>
+        
+        <FeaturesSection />
+        <StatsSection />
+        <FAQSection />
+      </div>
+    );
+  } else {
+    // Show original interface when images are uploaded
+    return <Body />;
+  }
+});
+
 const Body = observer(() => {
   return (
     <Flex align="stretch" className={style.main}>
-      {homeState.list.size === 0 ? <UploadCard /> : <LeftContent />}
+      <LeftContent />
       <RightOption />
     </Flex>
   );
@@ -102,7 +250,7 @@ const Home = observer(() => {
   return (
     <div className={style.container}>
       <Header />
-      <Body />
+      <MainContent />
       {homeState.compareId !== null && <Compare />}
     </div>
   );
