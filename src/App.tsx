@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Loading } from "./components/Loading";
 import { useResponse } from "./media";
 import { useEffect } from "react";
+import { SEO } from "./components/SEO";
 
 function useMobileVConsole() {
   const { isMobile } = useResponse();
@@ -23,23 +24,26 @@ export const App = observer(() => {
   useMobileVConsole();
 
   return (
-    <ConfigProvider
-      locale={gstate.locale?.antLocale}
-      theme={{
-        token: {
-          borderRadius: 0,
-          colorPrimary: "#078249",
-          colorLink: "#078249",
-          colorSuccess: "#078249",
-        },
-      }}
-    >
-      <AntApp>
-        <ContextAction />
-      </AntApp>
-      {import.meta.env.MODE === "production" && <Analytics />}
-      {gstate.page}
-      {gstate.loading && <Loading />}
-    </ConfigProvider>
+    <>
+      <SEO />
+      <ConfigProvider
+        locale={gstate.locale?.antLocale}
+        theme={{
+          token: {
+            borderRadius: 0,
+            colorPrimary: "#722ED1",
+            colorLink: "#722ED1",
+            colorSuccess: "#722ED1",
+          },
+        }}
+      >
+        <AntApp>
+          <ContextAction />
+        </AntApp>
+        {import.meta.env.MODE === "production" && <Analytics />}
+        {gstate.page}
+        {gstate.loading && <Loading />}
+      </ConfigProvider>
+    </>
   );
 });
