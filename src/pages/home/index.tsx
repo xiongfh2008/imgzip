@@ -64,35 +64,37 @@ const Header = observer(() => {
 });
 
 const FeaturesSection = () => {
+  const t = gstate.locale?.home;
+
   const features = [
     {
       icon: <ThunderboltOutlined style={{ fontSize: '32px', color: '#722ED1' }} />,
-      title: 'Lightning Fast Compression',
-      description: 'Compress images in seconds with our advanced algorithms that maintain quality while reducing file size.'
+      title: t?.feature1Title || 'Lightning Fast Compression',
+      description: t?.feature1Desc || 'Compress images in seconds with our advanced algorithms that maintain quality while reducing file size.'
     },
     {
       icon: <SafetyCertificateOutlined style={{ fontSize: '32px', color: '#722ED1' }} />,
-      title: 'Privacy First',
-      description: 'All image processing happens locally in your browser. No uploads to external servers - your images stay private.'
+      title: t?.feature2Title || 'Privacy First',
+      description: t?.feature2Desc || 'All image processing happens locally in your browser. No uploads to external servers - your images stay private.'
     },
     {
       icon: <CloudDownloadOutlined style={{ fontSize: '32px', color: '#722ED1' }} />,
-      title: 'Multiple Format Support',
-      description: 'Supports JPG, PNG, WEBP, AVIF, SVG, GIF and more. Convert between formats as needed.'
+      title: t?.feature3Title || 'Multiple Format Support',
+      description: t?.feature3Desc || 'Supports JPG, PNG, WEBP, AVIF, SVG, GIF and more. Convert between formats as needed.'
     },
     {
       icon: <CheckCircleOutlined style={{ fontSize: '32px', color: '#722ED1' }} />,
-      title: 'Quality Control',
-      description: 'Fine-tune compression settings to achieve the perfect balance between file size and image quality.'
+      title: t?.feature4Title || 'Quality Control',
+      description: t?.feature4Desc || 'Fine-tune compression settings to achieve the perfect balance between file size and image quality.'
     }
   ];
 
   return (
     <section style={{ padding: '60px 20px', backgroundColor: '#fff' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', marginBottom: '50px' }}>
-        <Typography.Title level={2}>Powerful Image Compression Made Simple</Typography.Title>
+        <Typography.Title level={2}>{t?.featuresTitle || 'Powerful Image Compression Made Simple'}</Typography.Title>
         <Typography.Paragraph style={{ fontSize: '18px', color: '#666' }}>
-          Reduce image file sizes without sacrificing quality. Perfect for websites, social media, and storage.
+          {t?.featuresDesc || 'Reduce image file sizes without sacrificing quality. Perfect for websites, social media, and storage.'}
         </Typography.Paragraph>
       </div>
       
@@ -115,33 +117,35 @@ const FeaturesSection = () => {
 };
 
 const StatsSection = () => {
+  const t = gstate.locale?.home;
+
   return (
     <section style={{ padding: '40px 20px', backgroundColor: '#f9f0ff', textAlign: 'center' }}>
       <Row gutter={[24, 24]} justify="center">
         <Col xs={12} sm={6}>
           <Statistic 
-            title="Average Size Reduction" 
+            title={t?.statsTitle1 || "Average Size Reduction"} 
             value="60-80%" 
             prefix={<span style={{ color: '#722ED1', fontSize: '24px' }}>↓</span>} 
           />
         </Col>
         <Col xs={12} sm={6}>
           <Statistic 
-            title="Supported Formats" 
+            title={t?.statsTitle2 || "Supported Formats"} 
             value="6+" 
             prefix={<span style={{ color: '#722ED1', fontSize: '24px' }}>🖼️</span>} 
           />
         </Col>
         <Col xs={12} sm={6}>
           <Statistic 
-            title="Privacy Guaranteed" 
+            title={t?.statsTitle3 || "Privacy Guaranteed"} 
             value="100%" 
             prefix={<span style={{ color: '#722ED1', fontSize: '24px' }}>🔒</span>} 
           />
         </Col>
         <Col xs={12} sm={6}>
           <Statistic 
-            title="No Registration" 
+            title={t?.statsTitle4 || "No Registration"} 
             value="✓" 
             prefix={<span style={{ color: '#722ED1', fontSize: '24px' }}>🚀</span>} 
           />
@@ -152,38 +156,40 @@ const StatsSection = () => {
 };
 
 const FAQSection = () => {
+  const t = gstate.locale?.home;
+  
   const faqs = [
     {
       key: '1',
-      label: 'How does Image Zip work?',
-      children: 'Image Zip processes your images directly in your browser using advanced compression algorithms. No images are uploaded to any server, ensuring your privacy and security. The compression reduces file sizes while maintaining visual quality.'
+      label: t?.faq1.label || 'How does Image Zip work?',
+      children: t?.faq1.desc || 'Image Zip processes your images directly in your browser using advanced compression algorithms. No images are uploaded to any server, ensuring your privacy and security. The compression reduces file sizes while maintaining visual quality.'
     },
     {
       key: '2',
-      label: 'Is my privacy protected?',
-      children: 'Yes, absolutely. All image processing happens locally in your browser. We never upload your images to any server, and no data is collected or stored. Your images remain completely private and secure.'
+      label: t?.faq2.label || 'Is my privacy protected?',
+      children: t?.faq2.desc || 'Yes, absolutely. All image processing happens locally in your browser. We never upload your images to any server, and no data is collected or stored. Your images remain completely private and secure.'
     },
     {
       key: '3',
-      label: 'What formats are supported?',
-      children: 'We support JPG, PNG, WEBP, AVIF, SVG, and GIF formats. You can compress images in any of these formats and even convert between formats while compressing.'
+      label: t?.faq3.label || 'What formats are supported?',
+      children: t?.faq3.desc || 'We support JPG, PNG, WEBP, AVIF, SVG, and GIF formats. You can compress images in any of these formats and even convert between formats while compressing.'
     },
     {
       key: '4',
-      label: 'Will image quality be affected?',
-      children: 'Our compression algorithms are designed to maintain visual quality while significantly reducing file sizes. You can adjust compression settings to find the perfect balance between file size and quality for your needs.'
+      label: t?.faq4.label || 'Will image quality be affected?',
+      children: t?.faq4.desc || 'Our compression algorithms are designed to maintain visual quality while significantly reducing file sizes. You can adjust compression settings to find the perfect balance between file size and quality for your needs.'
     },
     {
       key: '5',
-      label: 'Is there a file size limit?',
-      children: 'There are no strict limits - you can compress images of any size. However, processing very large images may take more time. The compression happens locally in your browser, so performance depends on your device capabilities.'
+      label: t?.faq5.label || 'Is there a file size limit?',
+      children: t?.faq5.desc || 'There are no strict limits - you can compress images of any size. However, processing very large images may take more time. The compression happens locally in your browser, so performance depends on your device capabilities.'
     }
   ];
 
   return (
     <section style={{ padding: '60px 20px', backgroundColor: '#fff' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <Typography.Title level={2} style={{ textAlign: 'center', marginBottom: '40px' }}>Frequently Asked Questions</Typography.Title>
+        <Typography.Title level={2} style={{ textAlign: 'center', marginBottom: '40px' }}>{t?.faqTitle || 'Frequently Asked Questions'}</Typography.Title>
         <Collapse accordion items={faqs} />
       </div>
     </section>
@@ -191,14 +197,16 @@ const FAQSection = () => {
 };
 
 const MainContent = observer(() => {
+  const t = gstate.locale?.home;
+
   // Show introduction when no images are uploaded
   if (homeState.list.size === 0) {
     return (
       <div>
         <div style={{ padding: '40px 20px', textAlign: 'center', backgroundColor: '#fafafa' }}>
-          <Typography.Title level={1}>Compress Images Instantly</Typography.Title>
+          <Typography.Title level={1}>{t?.title || 'Compress Images Instantly'}</Typography.Title>
           <Typography.Paragraph style={{ fontSize: '18px', marginTop: '20px' }}>
-            Reduce image file sizes by up to 80% without losing quality. All processing happens in your browser - your images stay private.
+            {t?.subtitle || 'Reduce image file sizes by up to 80% without losing quality. All processing happens in your browser - your images stay private.'}
           </Typography.Paragraph>
           <div style={{ marginTop: '40px' }}>
             <UploadCard />

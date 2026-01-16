@@ -6,7 +6,46 @@ const localeData: LocaleData = {
   logo: "IMGZIP",
   initial: "Inicializando",
   previewHelp:
-    "Arrastra la línea divisoria para comparar el efecto de compresión: a la izquierda es la imagen original, a la derecha es la imagen comprimida",
+    "Arrastre la línea divisoria para comparar el efecto de compresión: a la izquierda está la imagen original y a la derecha la imagen comprimida",
+  home: {
+    title: "Comprimir imágenes al instante",
+    subtitle: "Reduzca el tamaño de los archivos de imagen hasta en un 80% sin perder calidad. Todo el procesamiento ocurre en su navegador - sus imágenes permanecen privadas.",
+    featuresTitle: "Potente compresión de imágenes, uso sencillo",
+    featuresDesc: "Reduzca el tamaño de los archivos de imagen sin sacrificar la calidad. Perfecto para sitios web, redes sociales y almacenamiento.",
+    feature1Title: "Compresión ultrarrápida",
+    feature1Desc: "Comprima imágenes en segundos con nuestros algoritmos avanzados que mantienen la calidad mientras reducen el tamaño del archivo.",
+    feature2Title: "Privacidad primero",
+    feature2Desc: "Todo el procesamiento de imágenes ocurre localmente en su navegador. No hay cargas a servidores externos - sus imágenes permanecen privadas.",
+    feature3Title: "Soporte de múltiples formatos",
+    feature3Desc: "Soporta JPG, PNG, WEBP, AVIF, SVG, GIF y más. Convierta entre formatos según sea necesario.",
+    feature4Title: "Control de calidad",
+    feature4Desc: "Ajuste finamente los parámetros de compresión para lograr el equilibrio perfecto entre tamaño de archivo y calidad de imagen.",
+    statsTitle1: "Reducción promedio de tamaño",
+    statsTitle2: "Formatos soportados",
+    statsTitle3: "Privacidad garantizada",
+    statsTitle4: "Sin necesidad de registro",
+    faqTitle: "Preguntas frecuentes",
+    faq1: {
+      label: "¿Cómo funciona Image Zip?",
+      desc: "Image Zip procesa sus imágenes directamente en su navegador usando algoritmos avanzados de compresión. Ninguna imagen se carga a ningún servidor, asegurando su privacidad y seguridad. La compresión reduce el tamaño de los archivos manteniendo la calidad visual."
+    },
+    faq2: {
+      label: "¿Está protegida mi privacidad?",
+      desc: "Sí, absolutamente. Todo el procesamiento de imágenes ocurre localmente en su navegador. Nunca subimos sus imágenes a ningún servidor, ni se recopila o almacena ningún dato. Sus imágenes permanecen completamente privadas y seguras."
+    },
+    faq3: {
+      label: "¿Qué formatos son compatibles?",
+      desc: "Soportamos formatos JPG, PNG, WEBP, AVIF y GIF. Puede comprimir imágenes en cualquiera de estos formatos e incluso convertir entre formatos durante la compresión."
+    },
+    faq4: {
+      label: "¿Se verá afectada la calidad de la imagen?",
+      desc: "Nuestros algoritmos de compresión están diseñados para mantener la calidad visual mientras reducen significativamente el tamaño de los archivos. Puede ajustar los parámetros de compresión para encontrar el equilibrio perfecto entre tamaño de archivo y calidad para sus necesidades."
+    },
+    faq5: {
+      label: "¿Hay límite de tamaño de archivo?",
+      desc: "No hay límites estrictos - puede comprimir imágenes de cualquier tamaño. Sin embargo, el procesamiento de imágenes muy grandes puede tomar más tiempo. La compresión ocurre localmente en su navegador, por lo tanto el rendimiento depende de las capacidades de su dispositivo."
+    }
+  },
   uploadCard: {
     title: "Selecciona o arrastra tus imágenes aquí",
     subTitle: "Formatos soportados: %s",

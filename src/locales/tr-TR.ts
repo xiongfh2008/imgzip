@@ -6,7 +6,46 @@ const localeData: LocaleData = {
   logo: "IMGZIP",
   initial: "Başlatılıyor",
   previewHelp:
-    "Sıkıştırma etkisini karşılaştırmak için bölme çizgisini sürükleyin: soldaki orijinal görüntü, sağdaki sıkıştırılmış görüntü",
+    "Sıkıştırma etkisini karşılaştırmak için ayırıcı çizgiyi sürükleyin: sol taraf orijinal resim, sağ taraf sıkıştırılmış resimdir",
+  home: {
+    title: "Resimleri Anında Sıkıştırın",
+    subtitle: "Kalite kaybı olmadan görüntü dosya boyutlarını %80'e kadar azaltın. Tüm işlemler tarayıcınızda gerçekleşir - resimleriniz özel kalır.",
+    featuresTitle: "Güçlü Görüntü Sıkıştırma, Basit Kullanım",
+    featuresDesc: "Kaliteyi ödün vermeden görüntü dosyası boyutlarını azaltın. Web siteleri, sosyal medya ve depolama için mükemmeldir.",
+    feature1Title: "Yıldırım Hızında Sıkıştırma",
+    feature1Desc: "Dosya boyutunu küçültürken kaliteyi koruyan gelişmiş algoritmalarımızla saniyeler içinde resim sıkıştırın.",
+    feature2Title: "Öncelik Gizlilik",
+    feature2Desc: "Tüm resim işlemleri yerel olarak tarayıcınızda gerçekleşir. Harici sunuculara yükleme yok - resimleriniz özel kalır.",
+    feature3Title: "Çoklu Format Desteği",
+    feature3Desc: "JPG, PNG, WEBP, AVIF, SVG, GIF ve daha fazlasını destekler. Gerektiğinde formatlar arasında dönüştürme yapın.",
+    feature4Title: "Kalite Kontrolü",
+    feature4Desc: "Dosya boyutu ile görüntü kalitesi arasında mükemmel dengeyi sağlamak için sıkıştırma ayarlarını hassas şekilde ayarlayın.",
+    statsTitle1: "Ortalama Boyut Azalması",
+    statsTitle2: "Desteklenen Formatlar",
+    statsTitle3: "Gizlilik Garantili",
+    statsTitle4: "Kayıt Gerekliliği Yok",
+    faqTitle: "Sık Sorulan Sorular",
+    faq1: {
+      label: "Image Zip nasıl çalışır?",
+      desc: "Image Zip, gelişmiş sıkıştırma algoritmaları kullanarak resimlerinizi doğrudan tarayıcınızda işler. Sunucuya hiçbir resim yüklenmez, bu da gizliliğinizi ve güvenliğinizi sağlar. Sıkıştırma, görsel kaliteyi koruyarak dosya boyutlarını azaltır."
+    },
+    faq2: {
+      label: "Gizliliğim korunuyor mu?",
+      desc: "Evet, kesinlikle. Tüm resim işlemleri yerel olarak tarayıcınızda gerçekleşir. Resimlerinizi asla herhangi bir sunucuya yüklemez ve hiçbir veri toplanmaz veya saklanmaz. Resimleriniz tamamen özel ve güvenli kalır."
+    },
+    faq3: {
+      label: "Hangi formatlar destekleniyor?",
+      desc: "JPG, PNG, WEBP, AVIF ve GIF formatlarını destekliyoruz. Bu formatlardan herhangi birindeki resimleri sıkıştırabilir ve hatta sıkıştırma sırasında formatlar arasında dönüşüm yapabilirsiniz."
+    },
+    faq4: {
+      label: "Görüntü kalitesi etkilenir mi?",
+      desc: "Sıkıştırma algoritmalarımız, dosya boyutlarını önemli ölçüde azaltırken görsel kaliteyi korumak için tasarlanmıştır. Dosya boyutu ve kalite arasında mükemmel dengeyi bulmak için sıkıştırma ayarlarını ayarlayabilirsiniz."
+    },
+    faq5: {
+      label: "Dosya boyutu sınırı var mı?",
+      desc: "Katı kurallar yok - herhangi bir boyutta resimleri sıkıştırabilirsiniz. Ancak çok büyük resimlerin işlenmesi daha fazla zaman alabilir. Sıkıştırma yerel olarak tarayıcınızda gerçekleştiğinden, performans cihazınızın kapasitesine bağlıdır."
+    }
+  },
   uploadCard: {
     title: "Resimlerinizi buraya bırakın",
     subTitle: "Desteklenen formatlar: %s",

@@ -75,4 +75,43 @@ export interface LocaleData {
     after: string;
     rate: string;
   };
+  home: {
+    title: string;
+    subtitle: string;
+    featuresTitle: string;
+    featuresDesc: string;
+    feature1Title: string;
+    feature1Desc: string;
+    feature2Title: string;
+    feature2Desc: string;
+    feature3Title: string;
+    feature3Desc: string;
+    feature4Title: string;
+    feature4Desc: string;
+    statsTitle1: string;
+    statsTitle2: string;
+    statsTitle3: string;
+    statsTitle4: string;
+    faqTitle: string;
+    faq1: {
+      label: string;
+      desc: string;
+    };
+    faq2: {
+      label: string;
+      desc: string;
+    };
+    faq3: {
+      label: string;
+      desc: string;
+    };
+    faq4: {
+      label: string;
+      desc: string;
+    };
+    faq5: {
+      label: string;
+      desc: string;
+    };
+  };
 }

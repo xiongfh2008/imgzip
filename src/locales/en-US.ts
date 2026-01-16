@@ -7,6 +7,45 @@ const localeData: LocaleData = {
   initial: "Initializing",
   previewHelp:
     "Drag the dividing line to compare the compression effect: the left is the original image, the right is the compressed image",
+  home: {
+    title: "Compress Images Instantly",
+    subtitle: "Reduce image file sizes by up to 80% without losing quality. All processing happens in your browser - your images stay private.",
+    featuresTitle: "Powerful Image Compression Made Simple",
+    featuresDesc: "Reduce image file sizes without sacrificing quality. Perfect for websites, social media, and storage.",
+    feature1Title: "Lightning Fast Compression",
+    feature1Desc: "Compress images in seconds with our advanced algorithms that maintain quality while reducing file size.",
+    feature2Title: "Privacy First",
+    feature2Desc: "All image processing happens locally in your browser. No uploads to external servers - your images stay private.",
+    feature3Title: "Multiple Format Support",
+    feature3Desc: "Supports JPG, PNG, WEBP, AVIF, SVG, GIF and more. Convert between formats as needed.",
+    feature4Title: "Quality Control",
+    feature4Desc: "Fine-tune compression settings to achieve the perfect balance between file size and image quality.",
+    statsTitle1: "Average Size Reduction",
+    statsTitle2: "Supported Formats",
+    statsTitle3: "Privacy Guaranteed",
+    statsTitle4: "No Registration",
+    faqTitle: "Frequently Asked Questions",
+    faq1: {
+      label: "How does Image Zip work?",
+      desc: "Image Zip processes your images directly in your browser using advanced compression algorithms. No images are uploaded to any server, ensuring your privacy and security. The compression reduces file sizes while maintaining visual quality."
+    },
+    faq2: {
+      label: "Is my privacy protected?",
+      desc: "Yes, absolutely. All image processing happens locally in your browser. We never upload your images to any server, and no data is collected or stored. Your images remain completely private and secure."
+    },
+    faq3: {
+      label: "What formats are supported?",
+      desc: "We support JPG, PNG, WEBP, AVIF, SVG, and GIF formats. You can compress images in any of these formats and even convert between formats while compressing."
+    },
+    faq4: {
+      label: "Will image quality be affected?",
+      desc: "Our compression algorithms are designed to maintain visual quality while significantly reducing file sizes. You can adjust compression settings to find the perfect balance between file size and quality for your needs."
+    },
+    faq5: {
+      label: "Is there a file size limit?",
+      desc: "There are no strict limits - you can compress images of any size. However, processing very large images may take more time. The compression happens locally in your browser, so performance depends on your device capabilities."
+    }
+  },
   uploadCard: {
     title: "Select files here, support dragging files and folders",
     subTitle: "Open source batch image compression tool, supports %s format",
