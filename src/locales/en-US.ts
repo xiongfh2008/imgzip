@@ -3,7 +3,7 @@ import enUS from "antd/locale/en_US";
 
 const localeData: LocaleData = {
   antLocale: enUS,
-  logo: "Image Zip",
+  logo: "IMGZIP",
   initial: "Initializing",
   previewHelp:
     "Drag the dividing line to compare the compression effect: the left is the original image, the right is the compressed image",

@@ -3,7 +3,7 @@ import esES from "antd/locale/es_ES";
 
 const localeData: LocaleData = {
   antLocale: esES,
-  logo: "Pic Smaller",
+  logo: "IMGZIP",
   initial: "Inicializando",
   previewHelp:
     "Arrastra la línea divisoria para comparar el efecto de compresión: a la izquierda es la imagen original, a la derecha es la imagen comprimida",

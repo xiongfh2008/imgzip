@@ -3,7 +3,7 @@ import frFR from "antd/locale/fr_FR";
 
 const localeData: LocaleData = {
   antLocale: frFR,
-  logo: "Pic Smaller",
+  logo: "IMGZIP",
   initial: "Initialisation",
   previewHelp:
     "Faites glisser la ligne de séparation pour comparer l'effet de compression : l'image de gauche est l'image originale, celle de droite est l'image compressée",

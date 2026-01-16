@@ -3,7 +3,7 @@ import trTR from "antd/locale/tr_TR";
 
 const localeData: LocaleData = {
   antLocale: trTR,
-  logo: "Pic Smaller",
+  logo: "IMGZIP",
   initial: "Başlatılıyor",
   previewHelp:
     "Sıkıştırma etkisini karşılaştırmak için bölme çizgisini sürükleyin: soldaki orijinal görüntü, sağdaki sıkıştırılmış görüntü",

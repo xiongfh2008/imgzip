@@ -3,7 +3,7 @@ import faIR from "antd/locale/fa_IR";
 
 const localeData: LocaleData = {
   antLocale: faIR,
-  logo: "پیک کوچولو",
+  logo: "IMGZIP",
   initial: "در حال راه‌اندازی",
   previewHelp:
     "خط تقسیم را برای مقایسه اثر فشرده سازی بکشید: سمت چپ تصویر اصلی و سمت راست تصویر فشرده است",
