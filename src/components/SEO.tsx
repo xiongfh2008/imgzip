@@ -15,7 +15,7 @@ export const SEO = observer(({
   title = 'Image Zip – Compress JPEG, PNG, WEBP, AVIF, SVG and GIF images intelligently',
   description = 'Free online image compressor. Compress JPG, PNG, WEBP, AVIF, SVG, GIF and other image formats with high quality. Reduce file sizes instantly without losing quality.',
   keywords = 'compress image, image compression, image compressor, image optimizer, JPG compressor, PNG compressor, WEBP compressor, online image compressor, free image compressor, reduce image size, image file size reducer, photo compressor, picture compressor, image quality, lossless compression, image processing',
-  url = typeof window !== 'undefined' ? window.location.href : 'https://picsmaller.com/',
+  url = typeof window !== 'undefined' ? window.location.href : 'https://imgzip.toolkitlife.com/',
   image = '/logo.svg',
   type = 'website'
 }: SEOProps) => {
