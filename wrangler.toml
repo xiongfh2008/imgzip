@@ -3,10 +3,3 @@ compatibility_date = "2024-12-01"
 
 # Cloudflare Pages 配置
 pages_build_output_dir = "./dist"
-
-# 构建配置
-[build]
-command = "npm run build"
-
-[env.production]
-account_id = ""  # 替换为您的 Cloudflare 账户 ID
