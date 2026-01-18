@@ -2,7 +2,7 @@ import { Button, Divider, Dropdown, Flex, Space, Typography, Collapse, Row, Col,
 import style from "./index.module.scss";
 import { observer } from "mobx-react-lite";
 import { Logo } from "@/components/Logo";
-import { MenuOutlined, ThunderboltOutlined, CheckCircleOutlined, SafetyCertificateOutlined, CloudDownloadOutlined } from "@ant-design/icons";
+import { MenuOutlined, ThunderboltOutlined, CheckCircleOutlined, SafetyCertificateOutlined, CloudDownloadOutlined, GlobalOutlined } from "@ant-design/icons";
 import { gstate } from "@/global";
 import { changeLang, langList } from "@/locale";
 import { homeState } from "@/states/home";
@@ -39,9 +39,7 @@ const Header = observer(() => {
           }}
         >
           <Flex className={style.locale} align="center">
-            <svg viewBox="0 0 1024 1024" style={{ color: "currentcolor" }}>
-              <path d="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z" />
-            </svg>
+            <GlobalOutlined style={{ marginRight: 8, fontSize: '16px' }} />
             <Typography.Text>{getCurentLangStr()}</Typography.Text>
           </Flex>
         </Dropdown>
