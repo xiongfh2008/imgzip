@@ -1,6 +1,6 @@
-# Pic Smaller (图小小)
+# Image Zip (图像压缩)
 
-**Pic Smaller** is a super easy-to-use online image compression tool. Simply upload your desired image(s), and Pic Smaller will automatically perform its compress functionality and provide details on the results. Users can also customize features to suite their desired output, such as setting the output format or number of output colors. It's intuitive, website and mobile friendly, and supports compression configuration. At the same time, because of purely local compression without any server-side logic, it is completely safe.
+**Image Zip** is a super easy-to-use online image compression tool. Simply upload your desired image(s), and Image Zip will automatically perform its compress functionality and provide details on the results. Users can also customize features to suite their desired output, such as setting the output format or number of output colors. It's intuitive, website and mobile friendly, and supports compression configuration. At the same time, because of purely local compression without any server-side logic, it is completely safe.
 
 <br/>
 
@@ -19,9 +19,7 @@ Figure 3: Pic Smaller's comparison tool, that the user can drag to see the diffe
 
 ## Usage
 
-Pic smaller has been deployed to [`vercel`](https://vercel.com/), you can use it by visiting the URL [pic-smaller.vercel.app](https://pic-smaller.vercel.app). Due to the GFW, Chinese users can use it by visiting the URL [picsmaller.com](https://picsmaller.com/)
-
-> [picsmaller.com](https://picsmaller.com/) is a new domain that has just been applied for. The old domain [txx.cssrefs.com](https://txx.cssrefs.com/) is still accessible, but will be expired on `2025-02-22` and payment will not continue. Please use the latest domain to access the service.
+Image Zip has been deployed to Cloudflare Pages, you can use it by visiting the URL [https://imgzip.toolkitlife.com](https://imgzip.toolkitlife.com/)
 
 ## Preqrequisites
 
@@ -40,10 +38,10 @@ Pic smaller is a [Vite](https://vitejs.dev/) + [React](https://react.dev/) proje
 
 ```bash
 # Clone the repo
-git clone https://github.com/joye61/pic-smaller.git
+git clone https://github.com/joye61/image-zip.git
 
 # Change cwd
-cd ./pic-smaller
+cd ./image-zip
 
 # Install dependences
 npm install
@@ -65,10 +63,10 @@ If you want to independently deploy this project on your own server, the followi
 
 ```bash
 # Build docker image from Dockerfile
-docker build -t picsmaller .
+docker build -t imgzip .
 
 # Start a container
-docker run -p 3001:3001 -d picsmaller
+docker run -p 3001:3001 -d imgzip
 ```
 
 Now you can access the project via http://127.0.0.1:3001. If you want your project to be accessible to everyone, you need to prepare a domain name pointing to your local machine, and then proxy it to port 3001 of this machine, through a reverse proxy server like nginx.
@@ -77,6 +75,7 @@ Now you can access the project via http://127.0.0.1:3001. If you want your proje
 
 1. Ensure all required dependency installations have been properly followed to accurately test your changes.
 2. Update the README.md with information about changes to the interface, including new environment variables, important file locations, and container parameters.
+3. Update all references to the project name from "Pic Smaller" to "Image Zip" throughout the codebase and documentation.
 4. Increase the version numbers in all example files and the README.md to reflect the new version represented by your changes.
 5. Create a Pull Request with an appropriate and descriptive title and description.
 6. You can reach out to other developers to review and merge the Pull Request if appropriate.
@@ -85,7 +84,7 @@ Our standards for contributions: By using welcoming and inclusive language, resp
 
 ## Project Structure
 
-The src folder stores in all the files and components used in the react application like App.tsx.
+The src folder stores in all the files and components used in the Image Zip react application like App.tsx.
 <br/>
 The tests folder includes code to test particular features during the development process.
 <br/>

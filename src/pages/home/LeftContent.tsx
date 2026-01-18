@@ -134,7 +134,7 @@ export const LeftContent = observer(() => {
                   level: 6,
                 },
               });
-              createDownload("picsmaller.zip", result);
+              createDownload("imgzip.zip", result);
               gstate.loading = false;
             }}
           >
